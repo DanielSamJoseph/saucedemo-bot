@@ -13,22 +13,22 @@ driver=webdriver.Chrome()
 driver.get("https://www.saucedemo.com/")#Opens the saucedemo login page
 time.sleep(5)
 #types the username in the username field
-elem=driver.find_element(By.XPATH,"/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input")
+elem=driver.find_element(By.ID,"user-name")
 elem.clear()
 elem.send_keys(user)
 
-elem=driver.find_element(By.XPATH,"/html/body/div/div/div[2]/div[1]/div/div/form/div[2]/input")
+elem=driver.find_element(By.ID,"password")
 elem.clear()
 elem.send_keys(password)
 time.sleep(5)
 
 #clicks the login button
-login=driver.find_element(By.XPATH,"/html/body/div/div/div[2]/div[1]/div/div/form/input")
+login=driver.find_element(By.ID,"login-button")
 login.click()
 time.sleep(10)
 
 #clicks on the first product to the cart
-product=driver.find_element(By.XPATH,"/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button")
+product=driver.find_element(By.ID,"add-to-cart-sauce-labs-backpack")
 product.click()
 time.sleep(5)
 
@@ -37,6 +37,9 @@ threebars=driver.find_element(By.XPATH,"/html/body/div/div/div/div[1]/div[1]/div
 threebars.click()
 time.sleep(2)
 
-logout=driver.find_element(By.XPATH,"/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[3]")
+logout=driver.find_element(By.ID,"logout_sidebar_link")
 logout.click()
 time.sleep(5)
+
+print("Test completed successfully")
+driver.quit()
