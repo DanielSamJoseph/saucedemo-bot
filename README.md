@@ -1,4 +1,4 @@
-# saucedemo-bot
+# Saucedemo-bot
 A side project built with Selenium to experiment with automation concepts and improve my skills.
 
 If you wish to run this code then please do the following steps:
